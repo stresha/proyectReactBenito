@@ -1,6 +1,5 @@
-
 .App-header {
-  background-image: url(../public/bgfondo.jpg);
+  background-image: url(https://i.postimg.cc/nrsnLcPJ/snow.png); 
   animation: fondo 40s linear infinite;
   min-height: 100vh;
   display: flex;
@@ -13,13 +12,16 @@
   font-size: medium;
   background-color: #073576;
   display: flex;
-  justify-content: flex-end;
+  justify-content:center;
   padding: 10px;
   
 }
 .Nav_tester button {
-  margin-left: 20px;
+  margin-left: 40px;
   border-radius: 30px;
+}
+.cartContent {
+  margin-left: 100px;
 }
 .button:hover {
   background-color: #073576;
@@ -30,3 +32,56 @@
     background-position: 0px 0px; }
   100% {
     background-position: 500px 1000px, 400px 400px, 300px 300px; } }
+
+.card_products {
+ border-radius: 80px;
+ box-shadow:  0 0 20px blue;
+
+}
+
+.card_boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+.card_boton button {
+ 
+  border-radius: 3px;
+  height: 40px;
+  margin-top: 15px;
+ 
+}
+.contenedor_productos {
+   padding: 30px; 
+  font-family: 'Redressed', cursive;
+  font-size: large;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-gap: 20px;  
+}
+.caja {
+  padding: 20px; 
+  background-image: url(../public/bgfondo.jpg); 
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-family: 'Fredoka', sans-serif;
+  color: aliceblue;
+  border-radius: 30px;
+}
+.caja:hover {
+  box-shadow:  0 0 20px blue;
+}
+.banner {
+  background-image:url(https://i.postimg.cc/ZqFQrtdy/fondotesterver.jpg) ;
+  background-size: contain;
+  color: aliceblue;
+  font-family: 'VT323', monospace;
+  font-size:48px;
+  text-shadow: 8px 8px 8px black;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+}

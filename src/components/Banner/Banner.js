@@ -1,8 +1,9 @@
 
 const Banner = () => {
     return (
-        <picture>
-            <img src="https://i.postimg.cc/6QSz64gj/banner2.png" alt="banner" />
+        <picture className="banner">
+           <img src="https://i.postimg.cc/cLPkq1Q3/testgato.png" alt="carro pixel"/> 
+           <p>Bienvenido a mi tienda!</p>
         </picture>
     )
 

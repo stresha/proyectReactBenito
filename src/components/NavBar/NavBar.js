@@ -8,11 +8,12 @@ const NavBar = () => {
    } 
     return (
         <nav>
+           
+            <Button func={Tester} color='blue'/>
+            <Button func={Tester} color='blue'/>
+            <Button func={Tester}color='blue' />
+            <Button func={Tester}color='blue' />
             <CartWidget />
-            <Button func={Tester} color='blue'/>
-            <Button func={Tester} color='blue'/>
-            <Button func={Tester}color='blue' />
-            <Button func={Tester}color='blue' />
             
         </nav>
     )
