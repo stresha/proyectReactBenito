@@ -5,7 +5,10 @@ import ItemCount from "../ItemCount/ItemCount"
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
-
+    const onAdd = (quantity) => {
+        console.log("producto agregado")
+      }
+      
     useEffect(() => {
         getProducts().then(response => {
             setProducts(response)
@@ -19,7 +22,7 @@ const ItemListContainer = () => {
                 <img className='card_products' src={product.img} alt="producto"/>
                 <h5  >{product.name}</h5>
                 <p  >${product.price}</p>
-                <ItemCount  initial={1} stock={product.stock} />
+                <ItemCount  initial={1} stock={product.stock}  onAdd={onAdd}/>
             
             </div>)}
          
