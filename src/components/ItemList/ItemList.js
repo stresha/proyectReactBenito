@@ -3,7 +3,6 @@ import { getProducts } from "../products/products"
 import { useState, useEffect } from 'react'
 import ItemCount from "../ItemCount/ItemCount"
 import Item from "../Item/Item"
-
 const ItemList = () => {
     const [products, setProducts] = useState([])
     const onAdd = (quantity) => {
