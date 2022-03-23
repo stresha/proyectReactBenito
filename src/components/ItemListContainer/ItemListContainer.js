@@ -1,32 +1,12 @@
 import React from 'react'
-import { getProducts } from "../products/products"
-import { useState, useEffect } from 'react'
-import ItemCount from "../ItemCount/ItemCount"
+import { useState} from 'react'
+import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = () => {
-    const [products, setProducts] = useState([])
-    const onAdd = (quantity) => {
-        console.log("producto agregado")
-      }
-      
-    useEffect(() => {
-        getProducts().then(response => {
-            setProducts(response)
-        })
-    }, [])
-
-    console.log(products)
+    const [products] = useState([])
+    
     return(
-        <div className='contenedor_productos'>
-            {products.map(product => <div className='caja'  key={product.id} >
-                <img className='card_products' src={product.img} alt="producto"/>
-                <h5  >{product.name}</h5>
-                <p  >${product.price}</p>
-                <ItemCount  initial={1} stock={product.stock}  onAdd={onAdd}/>
-            
-            </div>)}
-         
-        </div>
+        <ItemList products={products}/>
 
     )
 }

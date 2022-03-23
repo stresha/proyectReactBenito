@@ -12,6 +12,7 @@ const ItemCount = ({ initial = 0, stock, onAdd}) => {
             alert("Sin Stock Disponible")
         }
     }
+
     const decrement = () => {
         if(count > 0) {
             setCount(count - 1)
@@ -28,6 +29,8 @@ const ItemCount = ({ initial = 0, stock, onAdd}) => {
         </div>
     )
 }
+
+
 
 export default ItemCount
 

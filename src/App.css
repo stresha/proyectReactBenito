@@ -63,7 +63,7 @@
 }
 .caja {
   padding: 20px; 
-  background-image: url(../public/bgfondo.jpg); 
+   background-image: url("https://i.postimg.cc/TP3010Dr/bgfondo.jpg");  
   text-align: center;
   letter-spacing: 0.2em;
   font-family: 'Fredoka', sans-serif;
@@ -74,7 +74,7 @@
   box-shadow:  0 0 20px blue;
 }
 .banner {
-  background-image:url(https://i.postimg.cc/ZqFQrtdy/fondotesterver.jpg) ;
+  background-image:url("https://i.postimg.cc/ZqFQrtdy/fondotesterver.jpg") ;
   background-size: contain;
   color: aliceblue;
   font-family: 'VT323', monospace;
