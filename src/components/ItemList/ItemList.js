@@ -20,9 +20,7 @@ const ItemList = () => {
         <div className='contenedor_productos'>
             {products.map(product => <div className='caja'>
             <Item key={product.id} producto={product} />
-            {/* <ItemCount  initial={1} stock={product.stock}  onAdd={onAdd}/> */}
-            
-            </div>)}
+        </div>)}
          
         </div>
 
