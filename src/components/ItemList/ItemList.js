@@ -18,12 +18,9 @@ const ItemList = () => {
     console.log(products)
     return(
         <div className='contenedor_productos'>
-            {products.map(product => <div className='caja'  key={product.id} >
-                <img className='card_products' src={product.img} alt="producto"/>
-                <h5  >{product.name}</h5>
-                <p  >${product.price}</p>
-                <Item/>
-                <ItemCount  initial={1} stock={product.stock}  onAdd={onAdd}/>
+            {products.map(product => <div className='caja'>
+            <Item key={product.id} producto={product} />
+            {/* <ItemCount  initial={1} stock={product.stock}  onAdd={onAdd}/> */}
             
             </div>)}
          

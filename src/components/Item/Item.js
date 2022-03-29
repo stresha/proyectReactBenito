@@ -1,16 +1,18 @@
-import { useState } from 'react'
-
-const Item = () => {
-  const [show, setShow] = useState(true)
+import { React } from "react";
 
 
+const Item = ({ producto }) => {
+  const { id, name, price, img } = producto;
 
-  
-    return (
-        
-        <button onClick={() => setShow(!show)}>{show ? 'soy un detalle' : 'Soy un detalle en construccion'}</button>
-    
-    
-    );
-    }
+  return (
+        <div   key={id} >
+                <img className='card_products' src={img} alt="producto"/>
+                <h5>{name}</h5>
+                <p >${price}</p>
+                <button  className='card_products' >Ver detalles del producto</button>
+                </div>
+          )      
+            
+};
+
 export default Item

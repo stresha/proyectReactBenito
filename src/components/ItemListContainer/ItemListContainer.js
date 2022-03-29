@@ -6,7 +6,7 @@ const ItemListContainer = () => {
     const [products] = useState([])
     
     return(
-        <ItemList products={products}/>
+        <ItemList />
 
     )
 }
