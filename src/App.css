@@ -8,25 +8,6 @@
   margin-bottom:  0px;
 }
 
-.Nav_tester {
-  font-size: medium;
-  background-color: #073576;
-  display: flex;
-  justify-content:center;
-  padding: 10px;
-  
-}
-.Nav_tester button {
-  margin-left: 40px;
-  border-radius: 30px;
-}
-.cartContent {
-  margin-left: 100px;
-}
-.button:hover {
-  background-color: #073576;
-}
-
 @keyframes fondo {
   0% {
     background-position: 0px 0px; }
@@ -39,19 +20,8 @@
 
 }
 
-.card_boton {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
- 
-}
-.card_boton button {
- 
-  border-radius: 3px;
-  height: 40px;
-  margin-top: 15px;
- 
-}
+
+
 .contenedor_productos {
    padding: 30px; 
   font-family: 'Redressed', cursive;
@@ -73,18 +43,7 @@
 .caja:hover {
   box-shadow:  0 0 20px blue;
 }
-.banner {
-  background-image:url("https://i.postimg.cc/ZqFQrtdy/fondotesterver.jpg") ;
-  background-size: contain;
-  color: aliceblue;
-  font-family: 'VT323', monospace;
-  font-size:48px;
-  text-shadow: 8px 8px 8px black;
-  display: flex;
-  flex-direction: row; 
-  justify-content: center;
-  align-items: center;
-}
+
 .stock {
   
   font-size: small;

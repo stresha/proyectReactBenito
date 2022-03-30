@@ -1,0 +1,23 @@
+.button_item {
+    background-color: blueviolet;
+    border: transparent;
+    color: aliceblue;
+}
+
+.button_item:hover{
+    box-shadow:  0 0 20px blue;
+}
+
+.card_boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+  }
+  .card_boton button {
+   
+    border-radius: 3px;
+    height: 40px;
+    margin-top: 15px;
+   
+  }
