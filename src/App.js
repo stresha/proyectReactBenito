@@ -1,9 +1,12 @@
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
 import Banner from './components/Banner/Banner';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+
+
 
 function App() {
  
@@ -13,14 +16,17 @@ function App() {
     
     <div className="App">
       <Banner/>
-       <div className="Nav_tester">
       
-       <NavBar/>
-       </div>
-      
-      <header className="App-header">
-      <ItemListContainer/>
-      </header>
+          
+      <BrowserRouter>
+      <NavBar/>
+      <Routes>
+      <Route path='/' element={<ItemListContainer />} />
+      <Route path='/category/:categoryId' element={<ItemListContainer />} />
+      <Route path='/item/:id' element={<ItemDetailContainer />} />
+      </Routes>
+      </BrowserRouter>
+     
       <Footer/>
     </div>
   );

@@ -1,23 +1,19 @@
-import Button from "../Button/Button"
+import './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget"
-import { useState, useEffect } from 'react'
-import { getProducts } from "../products/products"
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
-    const [search, setSearch] = useState("")
-
-   const Tester = () => {
-       console.log("esto es una prueba para ver si funciona el boton")
-   } 
+    
     return (
         <nav>
-            {/* <input type="text" onChange={(e) => setSearch(e.target.value)}/>
-            <button onClick={getProducts}>Buscar</button> */}
-            <Button func={Tester} color='blue'/>
-            <Button func={Tester} color='blue'/>
-            <Button func={Tester}color='blue' />
-            <Button func={Tester}color='blue' />
-            <CartWidget />
+           <div className="Categories">
+          <NavLink to='/' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Home</NavLink>
+          <NavLink to='/category/lamparas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>LAMPARAS</NavLink>
+          <NavLink to='/category/veladores' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>VELADORES</NavLink>
+          <NavLink to='/category/guirnaldas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>GUIRNALDAS</NavLink>
+          <NavLink to='/category/cortinas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>CORTINAS</NavLink>
+        </div>
+        <CartWidget />
             
         </nav>
     )

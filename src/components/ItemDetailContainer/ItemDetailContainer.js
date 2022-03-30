@@ -1,0 +1,30 @@
+import React from "react"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { getProductById } from "../products/products"
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+
+
+
+
+const ItemListContainer = () => {
+const [products, setProduct] = useState()
+const { id } = useParams()
+
+useEffect(() => {
+    getProductById(id).then(prod => {
+        setProduct(prod)
+    })
+}, [id])
+
+return (
+    <div>
+        <ItemDetail />
+    </div>
+)
+
+
+
+}
+
+export  default ItemListContainer
