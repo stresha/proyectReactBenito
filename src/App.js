@@ -13,11 +13,9 @@ function App() {
   
   
   return (
-    
+    <div className="App-header">
     <div className="App">
       <Banner/>
-      
-          
       <BrowserRouter>
       <NavBar/>
       <Routes>
@@ -26,8 +24,8 @@ function App() {
       <Route path='/item/:id' element={<ItemDetailContainer />} />
       </Routes>
       </BrowserRouter>
-     
-      <Footer/>
+     <Footer/>
+    </div>
     </div>
   );
 }
