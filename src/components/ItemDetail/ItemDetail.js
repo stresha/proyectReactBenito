@@ -9,6 +9,7 @@ const ItemDetail  = ({ name, id, price, description, stock, img }) => {
   }
   
   return (
+    <div className='caja_contenido' >
     <div className='caja_detalle'  key={id}  >
     <img className='card_products' src={img} alt="producto"/>
     <h5>{name}</h5>
@@ -16,6 +17,7 @@ const ItemDetail  = ({ name, id, price, description, stock, img }) => {
     <p>{description}</p>
     <ItemCount  initial={1} stock={stock}  onAdd={onAdd}/> 
     <p className='stock'>Stock disponible: {stock}</p>
+    </div>
     </div>
 )      
 

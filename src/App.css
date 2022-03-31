@@ -20,8 +20,6 @@
 
 }
 
-
-
 .contenedor_productos {
    padding: 30px; 
   font-family: 'Redressed', cursive;
@@ -50,4 +48,10 @@
   letter-spacing: 0px;
   
   
+}
+.text_busqueda{
+  text-align: center;
+  color: blueviolet;
+  font-size: xx-large;
+  font-family: 'Redressed', cursive;
 }

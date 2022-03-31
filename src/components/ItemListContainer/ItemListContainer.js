@@ -41,7 +41,7 @@ const ItemListContainer = ()=> {
     }, [categoryId])
 
     if(loading) {
-        return <h1>Nuestros gatitos estan buscando los productos</h1>
+        return <h1 className="text_busqueda">🐈‍ Nuestros gatitos estan buscando los productos.....🐈‍ </h1>
     }
     //muestra todo los product
     return (
