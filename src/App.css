@@ -17,7 +17,12 @@
 .card_products {
  border-radius: 80px;
  box-shadow:  0 0 20px blue;
+ transition: 2s;
 
+
+}
+.card_products:hover{
+  transform: scale(1.2);
 }
 
 .contenedor_productos {
@@ -37,6 +42,7 @@
   font-family: 'Fredoka', sans-serif;
   color: aliceblue;
   border-radius: 30px;
+  text-shadow: 2px 2px 2px blue
 }
 .caja:hover {
   box-shadow:  0 0 20px blue;
@@ -54,4 +60,10 @@
   color: blueviolet;
   font-size: xx-large;
   font-family: 'Redressed', cursive;
-}
+  animation: snow 10s linear infinite; }
+
+  @keyframes snow {
+    0% {
+      margin-right: 500px; }
+     100% {
+      margin-left: 500px  } }

@@ -1,5 +1,5 @@
 .caja_detalle {
-  
+  padding: 30px;
   margin: 0 200px;
     padding-bottom: 19px;
    background-image: url("https://i.postimg.cc/TP3010Dr/bgfondo.jpg");  
@@ -8,6 +8,7 @@
   font-family: 'Fredoka', sans-serif;
   color: aliceblue;
   border-radius: 30px;
+  text-shadow: 2px 2px 2px blue;
 }
 
 .caja_contenido {

@@ -4,8 +4,8 @@ import './ItemDetail.css'
 
 const ItemDetail  = ({ name, id, price, description, stock, img }) => {
   
-  const onAdd = (quantity) => {
-    console.log(quantity)
+  const onAdd = () => {
+    alert(`Agregado al carrito ${name}  ! excelente eleccion!`);
   }
   
   return (
