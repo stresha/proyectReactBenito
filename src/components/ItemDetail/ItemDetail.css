@@ -14,3 +14,14 @@
 .caja_contenido {
   padding: 50px;
 }
+
+.button_carrito {
+  background-color: blueviolet;
+  border: transparent;
+  color: aliceblue;
+  width: 90px;
+  border-radius: 3px;
+  height: 90px;
+  margin-bottom: 487px;
+  margin: 50px;
+  }

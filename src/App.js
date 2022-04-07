@@ -22,6 +22,7 @@ function App() {
       <Route path='/home' element={<ItemListContainer />} />
       <Route path='/category/:categoryId' element={<ItemListContainer />} />
       <Route path='/item/:id' element={<ItemDetailContainer />} />
+      
       </Routes>
       </BrowserRouter>
      <Footer/>
