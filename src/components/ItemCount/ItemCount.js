@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import swal from 'sweetalert'
 import './ItemCount.css'
+
 
 const ItemCount = ({ initial = 1, stock, onAdd}) => {
     const [count, setCount] = useState(initial)
@@ -11,7 +13,7 @@ const ItemCount = ({ initial = 1, stock, onAdd}) => {
             setCount(count + 1)
         }
         else {
-            alert("Sin Stock Disponible")
+            swal("Sin Stock Disponible")
         }
     }
 

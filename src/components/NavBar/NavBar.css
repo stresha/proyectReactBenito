@@ -40,3 +40,6 @@
   .ActiveOption:hover {
     box-shadow:  0 0 20px blue;
   }
+  .link_tienda {
+    margin-left: 50px;
+  }
