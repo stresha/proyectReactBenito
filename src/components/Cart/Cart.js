@@ -10,15 +10,18 @@ const Cart = () => {
 
     return (
         <div>
-            <h1 className='cart'>CARRITO DE COMPRAS !</h1>
-            <ul className='cart'>
+           <div className='cart'>
+            <h1 className='cart_text'>CARRITO DE COMPRAS ! 🐈</h1>
+            <button className='button_compra' onClick={borrarCarrito}>Vaciar carrito</button>
+            </div>
+            <ul className='cart_text'>
                 {cart.map(prod => <li key={prod.id}> <img src={prod.img}/>
                     <p>{prod.name}</p> 
                     <p>${prod.price}</p>
                     <p>Cantidad elegida : {prod.quantity}</p> 
                     <button>borrar</button> </li>)}
             </ul>
-            <button onClick={borrarCarrito}>Vaciar carrito</button>
+            
         </div>
     )
 }
