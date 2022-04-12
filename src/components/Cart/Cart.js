@@ -6,7 +6,7 @@ import CartContext from '../../Context/Context'
 
 
 const Cart = () => {
-    const { cart, borrarCarrito,  } = useContext(CartContext)
+    const { cart, borrarCarrito,borrarProducto  } = useContext(CartContext)
 
     return (
         <div>
@@ -19,7 +19,7 @@ const Cart = () => {
                     <p>{prod.name}</p> 
                     <p>${prod.price}</p>
                     <p>Cantidad elegida : {prod.quantity}</p> 
-                    <button>borrar</button> </li>)}
+                    <button  onClick={() => borrarProducto(prod.id)}>borrar</button> </li>)}
             </ul>
             
         </div>

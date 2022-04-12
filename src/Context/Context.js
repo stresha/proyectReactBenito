@@ -33,12 +33,37 @@ export const CartContextProvider = ({ children }) => {
             
     }
 
+    //borra 1 producto 
 
+    const borrarProducto = (id ) => {
+       console.log("borrarProducto")
+       console.log(id)
+        cart.map((prod) => {
+            if(prod.id===id) {
+                if (prod.quantity > 1) {
+                    prod.quantity--
+                    setCart([...cart])
+                }
+                else {
+                    let carritoNuevo = cart.filter((item) => item.id != id);
+                    setCart([...carritoNuevo]) 
+                }
+
+            }
+  
+        })
+        console.log(cart)
+    }
+    
+
+
+    // vuelve carrito un array vacio
     const borrarCarrito = () => {
         setCart([])
     }
 
 
+    //sumamos cantidad al lado del carrito
     const getQuantity = () => {
         let count = 0
         cart.forEach(prod => {
@@ -58,6 +83,7 @@ export const CartContextProvider = ({ children }) => {
             agregarProducto,
             borrarCarrito,
             getQuantity,
+            borrarProducto
            
             
         }}>
