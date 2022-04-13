@@ -38,14 +38,14 @@ export const CartContextProvider = ({ children }) => {
     const borrarProducto = (id ) => {
        console.log("borrarProducto")
        console.log(id)
-        cart.map((prod) => {
+        cart.filter((prod) => {
             if(prod.id===id) {
                 if (prod.quantity > 1) {
                     prod.quantity--
                     setCart([...cart])
                 }
                 else {
-                    let carritoNuevo = cart.filter((item) => item.id != id);
+                    let carritoNuevo = cart.filter((item) => item.id !== id); // con esto si lego a 0 desaparece
                     setCart([...carritoNuevo]) 
                 }
 
