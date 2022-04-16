@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Context = createContext()
 
@@ -54,7 +55,13 @@ export const CartContextProvider = ({ children }) => {
         })
         console.log(cart)
     }
-    
+
+    //borra todos esos productos del grupo (igual a item anterior)
+    const borrarTodos  = (id) => {
+        let carritoActualizado = cart.filter((item) => item.id !== id); // con esto si lego a 0 desaparece
+        setCart([...carritoActualizado]) 
+    }
+
     //suma productos 
     const precioFinal = () => {
         let total = 0 
@@ -66,12 +73,17 @@ export const CartContextProvider = ({ children }) => {
     
     }
 
-
     // vuelve carrito un array vacio
     const borrarCarrito = () => {
         setCart([])
     }
+    const finalizarCompra = () => {
+        setCart([])
+        alert("gracias por tu compra !!")
+       
+       
 
+    }
 
     //sumamos cantidad al lado del carrito
     const getQuantity = () => {
@@ -94,7 +106,9 @@ export const CartContextProvider = ({ children }) => {
             borrarCarrito,
             getQuantity,
             borrarProducto,
-            precioFinal
+            precioFinal,
+            borrarTodos,
+            finalizarCompra
 
            
             
