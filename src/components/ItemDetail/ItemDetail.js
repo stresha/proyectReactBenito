@@ -9,16 +9,14 @@ import CartContext from '../../Context/Context'
 
 //
 const ItemDetail  = ({ name, id, price, description, stock, img }) => {
-  const [quantity, setQuantity] = useState(0)
 
-
-  const { agregarProducto } = useContext(CartContext)
+  const { agregarProducto , estaEnCarrito} = useContext(CartContext)
   
 
 
     const compraOnAdd = (count) => {
      
-        setQuantity(count)
+        
         agregarProducto({ id, name, price, img}, count)
         swal(`Agregado al carrito ${name}! \n cantidad de productos: ${count} ! \n excelente eleccion!`)
     }
@@ -32,7 +30,7 @@ const ItemDetail  = ({ name, id, price, description, stock, img }) => {
     <p >${price}</p>
     <p>{description}</p>
     <p className='stock'>Stock disponible: {stock}</p>
-    {quantity === 0 ? <ItemCount stock={stock} onAdd={compraOnAdd}/> : <Link to='/cart' className='Option'>Finalizar Compra</Link>}
+    {estaEnCarrito(id) ? <Link to='/cart' className='Option'>Finalizar Compra</Link> :<ItemCount stock={stock} onAdd={compraOnAdd}/> }
     </div>
     </div>
 )      

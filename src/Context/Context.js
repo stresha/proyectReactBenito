@@ -77,7 +77,9 @@ export const CartContextProvider = ({ children }) => {
     // vuelve carrito un array vacio
     const borrarCarrito = () => {
         setCart([])
+        console.log("aca borrar carrito")
     }
+    
     const finalizarCompra = () => {
         setCart([])
         swal(" 🐈 Gracias por tu compra  🐈 !!")
@@ -96,6 +98,10 @@ export const CartContextProvider = ({ children }) => {
         return count
     }
 
+    //funcion para ver si es v 
+    const estaEnCarrito = (id) => {
+        return cart.some(item => item.id === id)
+    }
 
     
 
@@ -109,7 +115,8 @@ export const CartContextProvider = ({ children }) => {
             borrarProducto,
             precioFinal,
             borrarTodos,
-            finalizarCompra
+            finalizarCompra,
+            estaEnCarrito
 
            
             
