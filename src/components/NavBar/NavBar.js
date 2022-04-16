@@ -25,7 +25,7 @@ const NavBar = () => {
           <NavLink to='/category/veladores' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>VELADORES</NavLink>
           <NavLink to='/category/guirnaldas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>GUIRNALDAS</NavLink>
           <NavLink to='/category/cortinas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>CORTINAS</NavLink>
-          <NavLink to= '/cart' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>CARRITO</NavLink>
+          
          
         </div>
         

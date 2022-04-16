@@ -16,7 +16,7 @@ const Cart = () => {
            <div className='cart'>
             <h1 className='cart'>CARRITO DE COMPRAS ! 🐈</h1>
             <button className='button_compra' onClick={borrarCarrito}>Vaciar carrito</button>
-            <button className='button_compra_final' onClick={finalizarCompra}>COMPRAR !! 🐈</button>
+            <button className='button_compra_final' onClick= {() => finalizarCompra()}>COMPRAR !! 🐈</button>
             </div>
             <p className='cart_compra'>Total Compra: $ {precioFinal()}</p>
             {cart.length === 0 ? <Link to='/' className='cart_option'> Tu carrito esta vacio..... IR A LA TIENDA </Link> : null}

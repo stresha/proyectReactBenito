@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 const Context = createContext()
 
@@ -79,7 +80,7 @@ export const CartContextProvider = ({ children }) => {
     }
     const finalizarCompra = () => {
         setCart([])
-        alert("gracias por tu compra !!")
+        swal(" 🐈 Gracias por tu compra  🐈 !!")
        
        
 
