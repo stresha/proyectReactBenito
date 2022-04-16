@@ -7,6 +7,9 @@ import Footer from './components/Footer/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import { CartContextProvider } from './Context/Context'
+import { NotificationProvider } from './Mensaje/Mensaje'
+
+
 
 function App() {
  
@@ -16,7 +19,7 @@ function App() {
     <div className="App-header">
     <div className="App">
       <Banner/>
-      
+      <NotificationProvider>
       <CartContextProvider>
       <BrowserRouter>
       <NavBar/>
@@ -28,6 +31,7 @@ function App() {
       </Routes>
       </BrowserRouter>
       </CartContextProvider>
+      </NotificationProvider>
      <Footer/>
     </div>
     </div>

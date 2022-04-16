@@ -5,8 +5,7 @@ import './ItemDetail.css'
 import swal from "sweetalert"; // agrego libreria de sweet alert para personalizar alert
 import { Link } from 'react-router-dom'
 import CartContext from '../../Context/Context'
-
-
+import { useNotification } from '../../Mensaje/Mensaje'
 
 //
 const ItemDetail  = ({ name, id, price, description, stock, img }) => {
@@ -14,13 +13,14 @@ const ItemDetail  = ({ name, id, price, description, stock, img }) => {
 
 
   const { agregarProducto } = useContext(CartContext)
-
+  const { setNotification } = useNotification()
 
 
     const compraOnAdd = (count) => {
-      swal(`Agregado al carrito ${name}! \n cantidad de productos: ${count} ! \n excelente eleccion!`);
+     
         setQuantity(count)
         agregarProducto({ id, name, price, img}, count)
+        setNotification('success', `Agregado al carrito ${name}! \n cantidad de productos: ${count} ! \n excelente eleccion!`)
     }
         
   

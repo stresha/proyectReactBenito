@@ -55,6 +55,16 @@ export const CartContextProvider = ({ children }) => {
         console.log(cart)
     }
     
+    //suma productos 
+    const precioFinal = () => {
+        let total = 0 
+        for (const iterator of cart) {
+            total += iterator.quantity * iterator.price;
+        } 
+        console.log(total)
+        return total
+    
+    }
 
 
     // vuelve carrito un array vacio
@@ -83,7 +93,9 @@ export const CartContextProvider = ({ children }) => {
             agregarProducto,
             borrarCarrito,
             getQuantity,
-            borrarProducto
+            borrarProducto,
+            precioFinal
+
            
             
         }}>

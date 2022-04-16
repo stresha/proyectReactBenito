@@ -11,7 +11,7 @@ const NavBar = () => {
            <Link to='/' className='link_tienda'>
             <h1>Tienda</h1>
             </Link>
-          <NavLink to='/home' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>HOME</NavLink>
+          <NavLink to='/' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>HOME</NavLink>
           <NavLink to='/category/lamparas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>LAMPARAS</NavLink>
           <NavLink to='/category/veladores' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>VELADORES</NavLink>
           <NavLink to='/category/guirnaldas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>GUIRNALDAS</NavLink>
