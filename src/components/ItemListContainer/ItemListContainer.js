@@ -1,8 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from "../ItemList/ItemList"
-import { getProducts , getProductsByCategory} from "../products/products"
 import { useState, useEffect } from 'react'
+import { getProducts } from '../../servicos/firebase'
 
 const ItemListContainer = ()=> {
     const [products, setProducts] = useState([]) // productos a filtrar
@@ -13,43 +13,32 @@ const ItemListContainer = ()=> {
 
     // aca filtramos por cat, 
     useEffect(() => {
-        if(categoryId) {
-            setLoading(true)
-
-            getProductsByCategory(categoryId).then(items => {
-                setProducts(items)
-            }).catch(err => {
-                console.log(err)
-            }).finally(() => {
-                setLoading(false)
-            })
-        } else {
-            setLoading(true)
-
-            getProducts().then(item => {
-                setProducts(item)
-            }).catch(err  => {
-                console.log(err)
-            }).finally(() => {
-                setLoading(false)
-            })
-        }  
+        setLoading(true)
+        getProducts(categoryId).then(items => {
+            setProducts(items)
+        }).catch(err => {
+            console.log(err)
+        }).finally(() => {
+            setLoading(false)
+        })
 
         return (() => {
             setProducts([])
         })          
     }, [categoryId])
 
-    if(loading) {
-        return <h1 className="text_busqueda">🐈‍ Nuestros gatitos estan buscando los productos.....🐈‍ </h1>
-    }
-    //muestra todo los product
     return (
-        <div className="ItemListContainer">
-            <ItemList products={products}/>
+        <div >
+            {
+                loading ? 
+                <h1 className="text_busqueda">🐈‍ Nuestros gatitos estan buscando los productos.....🐈‍ </h1> :  
+                products.length > 0 ? 
+                    <ItemList products={products}/> : 
+                    <h1>No se encontraron productos!</h1>
+            }
         </div>
     )    
-    
-}
+        }   
+
 
 export default ItemListContainer

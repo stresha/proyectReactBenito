@@ -1,6 +1,6 @@
 import React from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import { getProductById } from "../products/products"
+import { getProductById } from "../../servicos/firebase"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 

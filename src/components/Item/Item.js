@@ -9,7 +9,6 @@ const Item = ({ producto }) => {
                 <img className='card_products' src={producto.img} alt="producto"/>
                 <h5>{producto.name}</h5>
                 <p >${producto.price}</p>
-                <p >{producto.id}</p>
                 <Link to={`/item/${producto.id}`} className='Option'>Ver detalle del producto</Link>
                 <p className='stock'>Stock disponible: {producto.stock}</p>
                 </div>
