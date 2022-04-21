@@ -2,7 +2,7 @@ import './Cart.css'
 import { useContext } from "react"
 import CartContext from '../../Context/Context'
 import { Link } from 'react-router-dom'
-import Formulario from '../Formulario/Formulario'
+
 
  const Cart = () => {
     const { cart, borrarCarrito,borrarProducto, precioFinal, borrarTodos, finalizarCompra, getQuantity  } = useContext(CartContext)
